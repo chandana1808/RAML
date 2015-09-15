@@ -1,0 +1,72 @@
+#%RAML 0.8
+title: API Schema defnition for lookup of static data entities.
+version: 1.0
+baseUri: http://www.rentokil-initial.com/api
+mediaType: application/json
+
+/SalesforceData: 
+  description: Resource to get SalesforceData data.
+  get:   
+   responses: 
+      200: 
+        body: 
+          application/json: 
+            schema: |
+              {
+                "type": "object",
+                "required": true,
+                "properties": {
+                  "Id": {
+                     "type": "string", 
+                     "required": true
+                     },
+                  "FirstName": {
+                     "type": "string", 
+                     "required": true
+                     },
+                  "LastName": {
+                     "type": "string", 
+                     "required": true
+                     },
+                  "MobilePhone": {
+                     "type": "string", 
+                     "required": true
+                     },
+                  "Email": {
+                     "type": "string", 
+                     "required": true
+                     },
+                  "MailingCity": {
+                     "type": "string", 
+                     "required": true
+                     },
+                  "BillingStreet": {
+                     "type": "string", 
+                     "required": true
+                     },
+                  "BillingCity": {
+                     "type": "string", 
+                     "required": true
+                     },
+                  "ShippingStreet": {
+                     "type": "string", 
+                     "required": true
+                     },
+                  "LastModifiedDate": {
+                     "type": "string", 
+                     "required": true
+                     },
+                  "OtherCity": {
+                     "type": "string", 
+                     "required": true
+                     },
+                  "OtherPostalCode": {
+                     "type": "string", 
+                     "required": true
+                     },
+                  "OtherState": {
+                     "type": "string", 
+                     "required": true
+                     }                  
+                }
+              }
